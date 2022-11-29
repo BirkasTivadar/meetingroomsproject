@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Controller {
 
-    private final Office office = new Office();
+    private Office office;
 
     public void readOffice() {
+        office = new Office();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Hány tárgyalót szeretne rögzíteni: ");
@@ -14,8 +15,6 @@ public class Controller {
         scanner.nextLine();
 
         loadOffice(scanner, numberOfMeetingrooms);
-
-
     }
 
     private void loadOffice(Scanner scanner, int numberOfMeetingrooms) {
